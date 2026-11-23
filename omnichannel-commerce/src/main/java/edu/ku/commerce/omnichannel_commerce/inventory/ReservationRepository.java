@@ -1,0 +1,1 @@
+package edu.ku.commerce.omnichannel_commerce.inventory; import java.util.*; import org.springframework.data.jpa.repository.JpaRepository; public interface ReservationRepository extends JpaRepository<Reservation,Long>{ List<Reservation> findByOrderId(Long orderId); List<Reservation> findByStateAndExpiresAtBefore(Reservation.State state, java.time.Instant time); }

@@ -1,0 +1,2 @@
+package edu.ku.commerce.omnichannel_commerce.cart; import jakarta.persistence.*; import lombok.*; import java.util.*;
+@Entity @Table(name="shopping_cart") @Getter @Setter @NoArgsConstructor public class Cart { @Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id; private Long customerId; private String channel; private String promoCode; @OneToMany(mappedBy="cart",cascade=CascadeType.ALL,orphanRemoval=true) private List<CartItem> items=new ArrayList<>(); @Version private Long version; }

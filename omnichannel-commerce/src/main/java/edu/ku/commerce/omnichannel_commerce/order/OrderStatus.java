@@ -1,0 +1,1 @@
+package edu.ku.commerce.omnichannel_commerce.order; public enum OrderStatus { PENDING, CONFIRMED, PICKING, PACKED, SHIPPED, READY_FOR_PICKUP, DELIVERED, CANCELLED, FAILED, RETURN_REQUESTED, RETURNED }

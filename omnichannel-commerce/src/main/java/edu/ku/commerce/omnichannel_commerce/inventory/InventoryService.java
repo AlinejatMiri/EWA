@@ -1,0 +1,1 @@
+package edu.ku.commerce.omnichannel_commerce.inventory; import java.util.*; public interface InventoryService { void reserve(Long orderId, Long productId, int quantity, Location location); void commit(Long orderId); void release(Long orderId); List<Stock> stock(Long productId); }

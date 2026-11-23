@@ -1,0 +1,3 @@
+package edu.ku.commerce.omnichannel_commerce.catalog;
+import jakarta.persistence.*; import java.math.*; import lombok.*;
+@Entity @Getter @Setter @NoArgsConstructor public class Product { @Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id; @Column(unique=true,nullable=false) private String sku; @Column(nullable=false) private String name; private String category; @Column(nullable=false,precision=19,scale=2) private BigDecimal price; private String imageUrl; @Column(length=4000) private String description; @Lob private String specs; private boolean active=true; @Version private Long version; }
